@@ -15,7 +15,10 @@ app.post('/login',userController.login)
 
     // category routes
     app.post('/createCategory',categoryController.createCategory)
-    app.post("/getAllCategory",categoryController.getAllCategory)
+    app.get("/getAllCategory",categoryController.getAllCategory)
+    app.get('/getsingleCategory/:name',categoryController.getsingleCategory)
+    app.put("/updateCategory/:id",categoryController.updateCategory)
+    app.delete("/deleteCategory/:id",categoryController.deleteCategory)
 
 app.listen( port||5000,()=>{
     console.log(`Server is running on ${port} url: http://localhost:${port}`)
