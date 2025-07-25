@@ -46,7 +46,8 @@ exports .registration = async(req, res)=>{
     } catch (error) {
         console.log("Error in registration",error)
          res.status(500).json({
-            msg:"Internal server error"
+            msg:"Internal server error",
+            error: error.message  
         })
     }
     
